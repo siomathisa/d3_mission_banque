@@ -8,16 +8,14 @@ namespace lib_banque
 {
     public class Banque
     {
-        private int id;
         private List<Compte> lstComptes;
+        private List<Type> mesTypes;
 
-        public Banque(int id)
+        public Banque()
         {
-            this.id = id;
             this.lstComptes = new List<Compte>();
+            this.mesTypes = new List<Type>();
         }
-
-        public Banque() { }
 
         public void ajouteCompte(Compte c)
         {
@@ -28,6 +26,27 @@ namespace lib_banque
         {
             Compte c = new Compte(numero, nom, solde, decouvertMax);
             this.lstComptes.Add(c);
+        }
+
+        public void AjouterType(string code, string libelle, char sens)
+        {
+            this.mesTypes.Add(new Type(code, libelle, sens));
+        }
+        public void AjouterType(Type unType)
+        {
+            this.mesTypes.Add(unType);
+        }
+        public Type GetType(string code)
+        {
+            Type type = null;
+            foreach (Type t in this.mesTypes)
+            {
+                if(code == t.Getcode)
+                {
+                    type = t;
+                }
+            }
+            return type;
         }
     }
 }

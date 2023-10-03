@@ -3,9 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "d3_tp2", "d3_tp2\d3_tp2.csproj", "{622CF9B1-D02B-4791-A79B-7BB17ED8CC58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "d3_tp2", "d3_tp2\d3_tp2.csproj", "{622CF9B1-D02B-4791-A79B-7BB17ED8CC58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lib_banque", "lib_banque\lib_banque.csproj", "{73573554-2A09-4177-8BC0-3D089F39C026}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lib_banque", "lib_banque\lib_banque.csproj", "{73573554-2A09-4177-8BC0-3D089F39C026}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EAE2F23A-78C3-4621-83CD-781EA2A0094F}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject1", "TestProject1\TestProject1.csproj", "{0F198719-21F2-431C-B3F9-54A195B489A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +28,10 @@ Global
 		{73573554-2A09-4177-8BC0-3D089F39C026}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73573554-2A09-4177-8BC0-3D089F39C026}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73573554-2A09-4177-8BC0-3D089F39C026}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F198719-21F2-431C-B3F9-54A195B489A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F198719-21F2-431C-B3F9-54A195B489A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F198719-21F2-431C-B3F9-54A195B489A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F198719-21F2-431C-B3F9-54A195B489A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

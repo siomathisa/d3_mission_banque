@@ -12,6 +12,7 @@ namespace lib_banque
         private string nom;
         private float solde;
         private float decouvertMax;
+        private List<Type> mesMouvements;
 
         public int GetNumero
         {
@@ -44,14 +45,14 @@ namespace lib_banque
             this.nom = nom;
             this.solde = solde;
             this.decouvertMax = decouvertMax;
+            this.mesMouvements = new List<Type>();
         }
 
         public bool Debiter(float montant)
         {
-
-            this.solde -= montant;
-            if (this.solde >= this.decouvertMax)
+            if (this.solde - montant >= this.decouvertMax)
             {
+                this.solde -= montant;
                 return true;
             }
             else
@@ -65,11 +66,10 @@ namespace lib_banque
         }
         public bool Transferer(float montant, Compte c)
         {
-            this.solde -= montant;
-            c.GetSolde += montant;
-
-            if (this.solde >= this.decouvertMax)
+           if (this.solde - montant >= this.decouvertMax)
             {
+                this.solde -= montant;
+                c.GetSolde += montant;
                 return true;
             }
             else
@@ -77,23 +77,27 @@ namespace lib_banque
                 return false;
             }
         }
-        public bool Superieur(Compte c)
+        public string Superieur(Compte c)
         {
             if (this.solde < c.GetSolde)
             {
-                return false;
+                return c.GetNom;
             }
             else
             {
-                return true;
+                return this.GetNom;
             }
+        }
+
+        public void AjouterMouvement(DateTime dateMvt, float montant)
+        {
+            
         }
 
         public override string ToString()
         {
             return $"numero : {this.numero} nom : {this.nom} solde : {this.solde} découvert autorisé : {this.decouvertMax}";
         }
-
 
     }
 }
